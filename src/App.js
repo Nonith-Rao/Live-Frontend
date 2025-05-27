@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
 
-const socket = io('http://localhost:5000', { reconnectionAttempts: 3 });
+const socket = io('https://live-tracking-m9tv.onrender.com', { reconnectionAttempts: 3 });
 
 function UpdateMapCenter({ center }) {
   const map = useMap();
@@ -42,7 +42,7 @@ function App() {
     const fetchLocations = async () => {
       try {
         if (locationId) {
-          const res = await fetch(`http://localhost:5000/api/locations/${locationId}`);
+          const res = await fetch(`https://live-tracking-m9tv.onrender.com/api/locations/${locationId}`);
           const data = await res.json();
           if (data.error) {
             setError(data.error);
@@ -52,7 +52,7 @@ function App() {
             console.log('Fetched single location:', data);
           }
         } else {
-          const res = await fetch('http://localhost:5000/api/locations');
+          const res = await fetch('https://live-tracking-m9tv.onrender.com/api/locations');
           const data = await res.json();
           setLocations(data);
           console.log('Fetched all locations:', data);
@@ -103,7 +103,7 @@ function App() {
       (position) => {
         const { latitude, longitude } = position.coords;
         console.log('Sharing location:', { username, latitude, longitude });
-        fetch('http://localhost:5000/api/locations', {
+        fetch('https://live-tracking-m9tv.onrender.com/api/locations', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, latitude, longitude }),
