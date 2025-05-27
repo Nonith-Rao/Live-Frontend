@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.url-input {
+  flex: 1;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.copy-button {
+  background-color: #28a745;
+}
+
+.copy-button:hover {
+  background-color: #218838;
+}
+
+.share-url {
+  margin-bottom: 20px;
+}
+
+.share-url p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.url-group {
+  display: flex;
+  gap: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.loading {
+  color: gray;
+  font-style: italic;
+}
+
+.locations ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.locations li {
+  margin-bottom: 5px;
+}
